@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Design Landing Page</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS Library (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('interior.jpg') no-repeat center center/cover;
+      position: relative;
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0 0 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background: #25D366;
+      color: white;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .btn:hover {
+      background: #1ebe5d;
+      transform: scale(1.05);
+    }
+
+    /* Section */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    /* Feedback Cards */
+    .feedback {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .chat-card {
+      background: #e5fce5;
+      border-radius: 15px;
+      padding: 15px 20px;
+      max-width: 300px;
+      text-align: left;
+      position: relative;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .chat-card::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 0;
+      height: 0;
+      border: 12px solid transparent;
+      border-top-color: #e5fce5;
+      border-bottom: 0;
+      margin-left: -12px;
+      margin-bottom: -12px;
+    }
+    .chat-name {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .feedback {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Transform Your Space</h1>
+      <p>Elegant & Modern Interior Design Solutions</p>
+      <a href="https://wa.me/60185728127" class="btn" target="_blank">Get Quote Now</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section data-aos="fade-right">
+    <h2>Why Choose Us?</h2>
+    <p>We create stunning interior designs that bring comfort, beauty, and functionality to your home or office.</p>
+    <p>Serendah <b>RM3.50</b> per sqft</p>
+    <img src="livingroom.jpg" alt="Living Room Design" width="80%" style="border-radius:20px; margin-top:20px;">
+  </section>
+
+  <!-- Feedback Section -->
+  <section data-aos="fade-left">
+    <h2>What they say</h2>
+    <div class="feedback">
+      <div class="chat-card">
+        <div class="chat-name">Aina</div>
+        "The team transformed my living room into a modern cozy space. Highly recommended!"
+      </div>
+      <div class="chat-card">
+        <div class="chat-name">Farid</div>
+        "Very professional and creative. They understood exactly what I wanted."
+      </div>
+      <div class="chat-card">
+        <div class="chat-name">Mei Ling</div>
+        "Love the results! My office looks amazing now, thank you so much."
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Nurfa Interior Design. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true      // animation only runs once
+    });
+  </script>
+</body>
+</html>
